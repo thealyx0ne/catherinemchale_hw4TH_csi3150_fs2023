@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script type="text/javascript" src="./js/app.js" defer></script>
+    <title>Used Cars</title>
+</head>
+
+<body>
+    <nav class="navBar">
+        <h2>Used Cars</h2>
+        <form id="filterForm"></form>
+        <!--Filter by Price-->
+        <div>
+            <label for="minPrice">Minimum Price:</label>
+            <input type="number" id="minPrice" value="0" />
+
+            <label for="maxPrice">Maximum Price:</label>
+            <input type="number" id="maxPrice" value="100000" />
+        </div>
+        <div>
+            <!--Filter by Year-->
+            <label for="yearFilter">Model Year: </label>
+            <select id="yearFilter">
+                <option value="anyYear">Any</option>
+                <option value="2007">2007</option>
+                <option value="2008">2008</option>
+                <option value="2009">2009</option>
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+            </select>
+        </div>
+        <!--Filter by Manufacturer-->
+        <label for="manufacturerFilter">Manufacturer: </label>
+        <select id="manufacturerFilter">
+            <option value="anyManufacturer">Any</option>
+            <option value="BMW">BMW</option>
+            <option value="Cadillac">Cadillac</option>
+            <option value="Chevrolet">Chevrolet</option>
+            <option value="Dodge">Dodge</option>
+            <option value="Ford">Ford</option>
+            <option value="Honda">Honda</option>
+            <option value="Hyundai">Hyundai</option>
+            <option value="Kia">Kia</option>
+            <option value="Lexus">Lexus</option>
+            <option value="Mazda">Mazda</option>
+            <option value="Nissan">Nissan</option>
+            <option value="Pontiac">Pontiac</option>
+            <option value="Porsche">Porsche</option>
+            <option value="Subaru">Subaru</option>
+            <option value="Toyota">Toyota</option>
+            <option value="Volkswagen">Volkswagen</option>
+        </select>
+        <!--Filter by color-->
+        <label for="colorFilter">Color: </label>
+        <select id="colorFilter">
+            <option value="anyColor">Any</option>
+            <option value="Black">Black</option>
+            <option value="Blue">Blue</option>
+            <option value="Gray">Gray</option>
+            <option value="Green">Green</option>
+            <option value="Red">Red</option>
+            <option value="Silver">Silver</option>
+            <option value="White">White</option>
+
+
+        </select>
+        <!-- reset and apply filter buttons -->
+        <button type="button" id="filterBtn">Filter</button>
+        <button type="button" id="resetBtn">Reset</button>
+        <div>
+    </nav>
+
+    <br />
+    <!--First Row of Cars-->
+    <div class="layout" id="layout">
+        <div class="card" carYear="2018" carMileage="30000" carManufacturer="Toyota" carPrice="18000" carColor="White">
+            <img src="./images/camry.jpg" alt="Toyota Camry">
+            <h2>Toyota Camry</h2>
+            <p class="price">$18000</p>
+            <hr>
+            <div class="moreInfo">
+                <p>Year: 2018</p>
+                <p>Make: Toyota</p>
+                <p>Model: Camry</p>
+                <p>Mileage: 30000</p>
+                <p>Color: Silver</p>
+                <p>Gas Mileage: 25mpg city, 35mpg highway</p>
+            </div>
+            <button class="infoBtn" id="infoBtn">More Information</button>
+        </div>
+        <div class="card" carYear="2016" carMileage="45000" carManufacturer="Honda" carPrice="14000" carColor="White">
+            <img src="./images/civic.jpg" alt="Honda Civic">
+            <h2>Honda Civic</h2>
+            <p class="price">$14000</p>
+            <hr>
+            <div class="moreInfo">
+                <p>Year: 2016</p>
+                <p>Make: Honda</p>
+                <p>Model: Civic</p>
+                <p>Mileage: 45000</p>
+                <p>Color: White</p>
+                <p>Gas Mileage: 30mpg city, 40mpg highway</p>
+            </div>
+            <button class="infoBtn" id="infoBtn">More Information</button>
+        </div>
+        <div class="card" carYear="2017" carMileage="35000" carManufacturer="Ford" carPrice="16000" carColor="Black">
+            <img src="./images/fusion.jpg" alt="Ford Fusion">
+            <h2>Ford Fusion</h2>
+            <p class="price">$16000</p>
+            <hr>
+            <div class="moreInfo">
+                <p>Year: 2017</p>
+                <p>Make: Ford</p>
+                <p>Model: Fusion</p>
+                <p>Mileage: 35000</p>
+                <p>Color: Black</p>
+                <p>Gas Mileage: 28mpg city, 38mpg highway</p>
+            </div>
+            <button class="infoBtn" id="infoBtn">More Information</button>
+        </div>
+        <div class="card" carYear="2019" carMileage="25000" carManufacturer="Nissan" carPrice="17000" carColor="Blue">
+            <img src="./images/altima.jpg" alt="Nissan Altima">
+            <h2>Nissan Altima</h2>
+            <p class="price">$17000</p>
+            <hr>
+            <div class="moreInfo">
+                <p>Year: 2019</p>
+                <p>Make: Nissan</p>
+                <p>Model: Altima</p>
+                <p>Mileage: 25000</p>
+                <p>Color: Blue</p>
+                <p>Gas Mileage: 27mpg city, 36mpg highway</p>
+            </div>
+            <button class="infoBtn" id="infoBtn">More Information</button>
+        </div>
+        <div class="card" carYear="2015" carMileage="50000" carManufacturer="Chevrolet" carPrice="12000" carColor="Red">
+            <img src="./images/malibu.jpg" alt="Chevrolet Malibu">
+            <h2>Chevrolet Malibu</h2>
+            <p class="price">$12000</p>
+            <hr>
+            <div class="moreInfo">
+                <p>Year: 2015</p>
+                <p>Make: Chevrolet</p>
+                <p>Model: Malibu</p>
+                <p>Mileage: 50000</p>
+                <p>Color: Red</p>
+                <p>Gas Mileage: 25mpg city, 37mpg highway</p>
+            </div>
+            <button class="infoBtn" id="infoBtn">More Information</button>
+        </div>
+        <div class="card" carYear="2016" carMileage="40000" carManufacturer="Volkswagen" carPrice="12000"
+            carColor="Gray">
+            <img src="./images/passat.jpg" alt="Volkswagen Passat">
+            <h2>Volkswagen Passat</h2>
+            <p class="price">$15000</p>
+            <hr>
+            <div class="moreInfo">
+                <p>Year: 2016</p>
+                <p>Make: Volkswagen</p>
+                <p>Model: Passat</p>
+                <p>Mileage: 40000</p>
+                <p>Color: Gray</p>
+                <p>Gas Mileage: 29mpg city, 40mpg highway</p>
+            </div>
+            <button class="infoBtn" id="infoBtn">More Information</button>
+        </div>
+        <div class="card" carYear="2020" carMileage="22000" carManufacturer="Hyundai" carPrice="16000"
+            carColor="Silver">
+            <img src="./images/elantra.jpg" alt="Hyundai Elantra">
+            <h2>Hyundai Elantra</h2>
+            <p class="price">$16000</p>
+            <hr>
+            <div class="moreInfo">
+                <p>Year: 2020</p>
+                <p>Make: Hyundai</p>
+                <p>Model: Elantra</p>
+                <p>Mileage: 22000</p>
+                <p>Color: Silver</p>
+                <p>Gas Mileage: 30mpg city, 41mpg highway</p>
+            </div>
+            <button class="infoBtn" id="infoBtn">More Information</button>
+        </div>
+        <div class="card" carYear="2014" carMileage="60000" carManufacturer="Subaru" carPrice="14000" carColor="Green">
+            <img src="./images/outback.jpg" alt="Subaru Outback">
+            <h2>Subaru Outback</h2>
+            <p class="price">$14000</p>
+            <hr>
+            <div class="moreInfo">
+                <p>Year: 2014</p>
+                <p>Make: Subaru</p>
+                <p>Model: Outback</p>
+                <p>Mileage: 60000</p>
+                <p>Color: Green</p>
+                <p>Gas Mileage: 22mpg city, 30mpg highway</p>
+            </div>
+            <button class="infoBtn" id="infoBtn">More Information</button>
+        </div>
+        <div class="card" carYear="2017" carMileage="32000" carManufacturer="Mazda" carPrice="19000" carColor="Blue">
+            <img src="./images/cx-5.jpg" alt="Mazda CX-5">
+            <h2>Mazda CX-5</h2>
+            <p class="price">$19000</p>
+            <hr>
+            <div class="moreInfo">
+                <p>Year: 2017</p>
+                <p>Make: Mazda</p>
+                <p>Model: CX-5</p>
+                <p>Mileage: 32000</p>
+                <p>Color: Blue</p>
+                <p>Gas Mileage: 24mpg city, 31mpg highway</p>
+            </div>
+            <button class="infoBtn" id="infoBtn">More Information</button>
+        </div>
+        <div class="card" carYear="2018" carMileage="28000" carManufacturer="Kia" carPrice="17000" carColor="White">
+            <img src="./images/sorento.jpg" alt="Kia Sorento">
+            <h2>Kia Sorento</h2>
+            <p class="price">$17000</p>
+            <hr>
+            <div class="moreInfo">
+                <p>Year: 2018</p>
+                <p>Make: Kia</p>
+                <p>Model: Sorento</p>
+                <p>Mileage: 28000</p>
+                <p>Color: White</p>
+                <p>Mileage: 22mpg city, 29mpg highway</p>
+            </div>
+            <button class="infoBtn" id="infoBtn">More Information</button>
+        </div>
+        <div class="card" carYear="2015" carMileage="30000" carManufacturer="Dodge" carPrice="24000" carColor="Black">
+            <img src="./images/challenger.jpg" alt="Dodge Challenger">
+            <h2>Dodge Challenger</h2>
+            <p class="price">$24000</p>
+            <hr>
+            <div class="moreInfo">
+                <p>Year: 2015</p>
+                <p>Make: Dodge</p>
+                <p>Model: Challenger</p>
+                <p>Mileage: 30000</p>
+                <p>Color: Black</p>
+                <p>Mileage: 19mpg city, 30mpg highway</p>
+            </div>
+            <button class="infoBtn" id="infoBtn">More Information</button>
+        </div>
+        <div class="card" carYear="2017" carMileage="28000" carManufacturer="Cadillac" carPrice="32000" carColor="Red">
+            <img src="./images/xt5.jpg" alt="Cadillac XT5">
+            <h2>Cadillac XT5</h2>
+            <p class="price">$32000</p>
+            <hr>
+            <div class="moreInfo">
+                <p>Year: 2017</p>
+                <p>Make: Cadillac</p>
+                <p>Model: XT5</p>
+                <p>Mileage: 28000</p>
+                <p>Color: Red</p>
+                <p>Mileage: 19mpg city, 27mpg highway</p>
+            </div>
+            <button class="infoBtn" id="infoBtn">More Information</button>
+        </div>
+        <div class="card" carYear="2018" carMileage="26000" carManufacturer="Jaguar" carPrice="38000" carColor="Blue">
+            <img src="./images/f-pace.jpg" alt="Jaguar F-PACE">
+            <h2>Jaguar F-PACE</h2>
+            <p class="price">$38000</p>
+            <hr>
+            <div class="moreInfo">
+                <p>Year: 2018</p>
+                <p>Make: Jaguar</p>
+                <p>Model: F-PACE</p>
+                <p>Mileage: 26000</p>
+                <p>Color: Blue</p>
+                <p>Mileage: 18mpg city, 23mpg highway</p>
+            </div>
+            <button class="infoBtn" id="infoBtn">More Information</button>
+        </div>
+        <div class="card" carYear="2019" carMileage="18000" carManufacturer="Tesla" carPrice="18000" carColor="Black">
+            <img src="./images/model-s.jpg" alt="Tesla Model S">
+            <h2>Tesla Model S</h2>
+            <p class="price">$18000</p>
+            <hr>
+            <div class="moreInfo">
+                <p>Year: 2019</p>
+                <p>Make: Tesla</p>
+                <p>Model: Model S</p>
+                <p>Mileage: 18000</p>
+                <p>Color: Black</p>
+                <p>Mileage: Electric (370 miles per charge)</p>
+            </div>
+            <button class="infoBtn" id="infoBtn">More Information</button>
+        </div>
+        <div class="card" carYear="2020" carMileage="22000" carManufacturer="Porsche" carPrice="68000" carColor="White">
+            <img src="./images/cayenne.jpg" alt="Porsche Cayenne">
+            <h2>Porsche Cayenne</h2>
+            <p class="price">$68000</p>
+            <hr>
+            <div class="moreInfo">
+                <p>Year: 2020</p>
+                <p>Make: Porsche</p>
+                <p>Model: Cayenne</p>
+                <p>Mileage: 22000</p>
+                <p>Color: White</p>
+                <p>Mileage: 20mpg city, 26mpg highway</p>
+            </div>
+            <button class="infoBtn" id="infoBtn">More Information</button>
+        </div>
+        <div class="card" carYear="2017" carMileage="29000" carManufacturer="Lexus" carPrice="26000" carColor="White">
+            <img src="./images/es.jpg" alt="Lexus ES">
+            <h2>Lexus ES</h2>
+            <p class="price">$26000</p>
+            <hr>
+            <div class="moreInfo">
+                <p>Year: 2017</p>
+                <p>Make: Lexus</p>
+                <p>Model: ES</p>
+                <p>Mileage: 29000</p>
+                <p>Color: White</p>
+                <p>Mileage: 21mpg city, 30mpg highway</p>
+            </div>
+            <button class="infoBtn" id="infoBtn">More Information</button>
+        </div>
+        <div class="card" carYear="2016" carMileage="32000" carManufacturer="BMW" carPrice="27000" carColor="Black">
+            <img src="./images/5series.jpg" alt="BMW 5 Series">
+            <h2>BMW 5 Series</h2>
+            <p class="price">$27000</p>
+            <hr>
+            <div class="moreInfo">
+                <p>Year: 2016</p>
+                <p>Make: BMW</p>
+                <p>Model: 5 Series</p>
+                <p>Mileage: 32000</p>
+                <p>Color: Black</p>
+                <p>Mileage: 23mpg city, 34mpg highway</p>
+            </div>
+            <button class="infoBtn" id="infoBtn">More Information</button>
+        </div>
+    </div>
+</body>
+
+</html>

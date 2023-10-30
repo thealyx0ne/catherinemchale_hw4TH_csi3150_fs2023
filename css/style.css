@@ -1,0 +1,89 @@
+html {
+  background-image: url(../images/background.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 85%;
+  position: absolute;
+  background-color: black;
+  width: 100%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+
+body {
+  opacity: 100%;
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 100%;
+  background-color: black;
+  background-size: auto;
+  position: relative;
+  overflow: scroll;
+}
+
+
+textarea {
+  resize: none;
+}
+
+textarea:hover {
+  background-color: #f2f2f2;
+}
+
+button {
+  height: 30px;
+  width: 100px;
+}
+
+.layout {
+  padding-top: 10px;
+  display: inline;
+  position: relative;
+  transform: translate(-50%, -50%);
+
+  }
+
+.card {
+  display: inline-block;
+  width: 19%;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card:hover {
+  background-color: #333333;
+}
+
+.moreInfo {
+
+  text-align: left;
+}
+
+#infoBtn {
+  width: 100%;
+  background-color: #b3e6ff;
+}
+
+#infoBtn:hover{
+  background-color: #99ddff;
+}
+
